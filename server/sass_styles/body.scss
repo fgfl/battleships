@@ -1,0 +1,15 @@
+@use 'constants' as c;
+
+$banner-height: 10vh;
+
+.game-container {
+  display: grid;
+  grid: 
+    [row1-start] 'banner' c.$banner-height [row1-end]
+    [row2-start] 'board-area' c.$player-board-height * 2 + c.$dangerous-water-height [row2-end]
+    / auto;
+  
+  height: 100vh;
+
+
+}

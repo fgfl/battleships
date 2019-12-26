@@ -1,0 +1,7 @@
+.game-container {
+  display: grid;
+  grid: [row1-start] "banner" 10vh [row1-end] [row2-start] "board-area" 170vh [row2-end]/auto;
+  height: 100vh;
+}
+
+/*# sourceMappingURL=body.css.map */

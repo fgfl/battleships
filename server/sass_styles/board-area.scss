@@ -1,0 +1,39 @@
+@use 'constants' as c;
+
+$player-board-height: 80vh;
+$dangerous-water-height: 10vh;
+$op-area: "opponent-area";
+$dang-area: "dangerous-water";
+$player-area: "player-area";
+
+.board-area {
+  // grid item properties
+  grid-area: board-area;
+
+  background-color: cadetblue;
+
+  // grid contaienr properties
+  display: grid;
+  grid:
+    [row1-start] $op-area c.$player-board-height [row1-end]
+    [row2-start] $dang-area c.$dangerous-water-height [row2-end]
+    [row3-start] $player-area c.$player-board-height [row3-end]
+    / auto;
+
+  .opponent {
+    // grid item props
+    grid-area: $op-area;
+  }
+
+  .dangerous-water {
+    // grid item props
+    grid-area: $dang-area;
+
+  }
+
+  .player {
+    // grid item props
+    grid-area: $player-area;
+  }
+
+}

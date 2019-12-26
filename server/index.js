@@ -11,7 +11,7 @@ const methodOverride = require('method-override');
 const app = express();
 const PORT = 8080;
 
-
+app.use(express.static("public"));
 app.use(methodOverride('_method'));
 app.use(bodyParser.urlencoded({exteneded: true}));
 app.use(cookieSession({
@@ -36,5 +36,9 @@ const saltRounds = 10;
 // Endpoints
 //===================
 app.get('/', (req, res) => {
-  res.render('index.html');
+  res.render('../public/index');
 })
+
+app.listen(PORT, () => {
+  console.log(`App listening to port ${PORT}`);
+});

@@ -1,0 +1,17 @@
+.board-area {
+  grid-area: board-area;
+  background-color: cadetblue;
+  display: grid;
+  grid: [row1-start] "opponent-area" 80vh [row1-end] [row2-start] "dangerous-water" 10vh [row2-end] [row3-start] "player-area" 80vh [row3-end]/auto;
+}
+.board-area .opponent {
+  grid-area: "opponent-area";
+}
+.board-area .dangerous-water {
+  grid-area: "dangerous-water";
+}
+.board-area .player {
+  grid-area: "player-area";
+}
+
+/*# sourceMappingURL=board-area.css.map */
