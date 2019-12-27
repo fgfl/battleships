@@ -1,7 +1,10 @@
 .banner {
   background-color: #d4c483;
-  display: fixed;
-  grid-area: banner;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 10vh;
 }
 
 /*# sourceMappingURL=banner.css.map */
