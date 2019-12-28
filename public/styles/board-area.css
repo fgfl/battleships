@@ -1,17 +1,24 @@
+.board-area .player, .board-area .opponent {
+  padding: 3%;
+  display: grid;
+  grid: repeat(10, 10%)/repeat(10, 10%);
+}
+
 .board-area {
-  grid-area: board-area;
+  margin-top: 10vh;
+  margin-left: 10vw;
   background-color: cadetblue;
   display: grid;
   grid: [row1-start] "opponent-area" 80vh [row1-end] [row2-start] "dangerous-water" 10vh [row2-end] [row3-start] "player-area" 80vh [row3-end]/auto;
 }
 .board-area .opponent {
-  grid-area: "opponent-area";
+  grid-area: opponent-area;
 }
 .board-area .dangerous-water {
-  grid-area: "dangerous-water";
+  grid-area: dangerous-water;
 }
 .board-area .player {
-  grid-area: "player-area";
+  grid-area: player-area;
 }
 
 /*# sourceMappingURL=board-area.css.map */

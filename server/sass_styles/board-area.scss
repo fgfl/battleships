@@ -2,27 +2,43 @@
 
 $player-board-height: 80vh;
 $dangerous-water-height: 10vh;
-$op-area: "opponent-area";
-$dang-area: "dangerous-water";
-$player-area: "player-area";
+$op-area: opponent-area;
+$dang-area: dangerous-water;
+$player-area: player-area;
+$nav-area: nav-area;
+
+$n-size: 10;
+
+%bs-grid {
+  padding: 3%;
+
+  display: grid;
+  grid: 
+    repeat($n-size, 100% / $n-size)
+    / repeat($n-size, 100% / $n-size);
+}
 
 .board-area {
-  // grid item properties
-  grid-area: board-area;
+  margin-top: c.$banner_height;
+  margin-left: c.$nav-width;
 
   background-color: cadetblue;
 
   // grid contaienr properties
   display: grid;
   grid:
-    [row1-start] $op-area c.$player-board-height [row1-end]
-    [row2-start] $dang-area c.$dangerous-water-height [row2-end]
-    [row3-start] $player-area c.$player-board-height [row3-end]
+    [row1-start] "#{$op-area}" c.$player-board-height [row1-end]
+    [row2-start] "#{$dang-area}" c.$dangerous-water-height [row2-end]
+    [row3-start] "#{$player-area}" c.$player-board-height [row3-end]
     / auto;
 
+
   .opponent {
+    @extend %bs-grid;
+
     // grid item props
     grid-area: $op-area;
+
   }
 
   .dangerous-water {
@@ -32,6 +48,8 @@ $player-area: "player-area";
   }
 
   .player {
+    @extend %bs-grid;
+
     // grid item props
     grid-area: $player-area;
   }

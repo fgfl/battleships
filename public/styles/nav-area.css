@@ -1,0 +1,11 @@
+.nav-area {
+  margin-top: 10vh;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 10vw;
+  height: 90vh;
+  background-color: rebeccapurple;
+}
+
+/*# sourceMappingURL=nav-area.css.map */

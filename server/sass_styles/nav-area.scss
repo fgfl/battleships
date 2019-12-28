@@ -1,0 +1,13 @@
+@use 'constants' as c;
+
+.nav-area {
+  margin-top: c.$banner_height;
+
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: c.$nav-width;
+  height: 100vh - c.$banner_height;
+
+  background-color: rebeccapurple;
+}
