@@ -4,8 +4,12 @@
   left: 0;
   bottom: 0;
   width: 10vw;
+  min-width: 120px;
   height: 90vh;
   background-color: rebeccapurple;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
 }
 
 /*# sourceMappingURL=nav-area.css.map */

@@ -6,6 +6,9 @@
   grid: repeat(10, 1fr)/repeat(10, 1fr);
   gap: 3px;
 }
+.board-area .player div, .board-area .opponent div {
+  background-color: #d44b8b;
+}
 
 .board-area {
   margin-top: 10vh;

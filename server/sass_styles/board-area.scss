@@ -1,4 +1,5 @@
 @use 'constants' as c;
+@use 'sass:math';
 
 $player-board-height: 80vh;
 $dangerous-water-height: 10vh;
@@ -21,6 +22,10 @@ $n-size: 10;
     repeat($n-size, 1fr)
     / repeat($n-size, 1fr);
   gap: 3px;
+
+  div {
+    background-color: rgb(212, 75, 139);
+  }
 }
 
 .board-area {
