@@ -26,10 +26,17 @@
   <nav class="nav-area">Nav controls</nav>
   
   <main class="board-area">
-    <!-- TODO add side bar for nav and commands -->
-    <h2 class="opponent">Opponent board</h2>
-    <h2 class="dangerous-water">Kraken lives here</h2>
-    <h2 class="player">Your side</h2>
+    <div class="opponent">
+      <%- include('./partials/_board-grid') %>
+    </div>
+
+    <div class="dangerous-water">
+      <h2>Kraken lives here</h2>
+    </div>
+
+    <div class="player">
+      <%- include('./partials/_board-grid') %>
+    </div>
 
 
   </main>

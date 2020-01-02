@@ -9,13 +9,18 @@ $nav-area: nav-area;
 
 $n-size: 10;
 
+// battle ship grid
 %bs-grid {
   padding: 3%;
+  margin: 0 0;
+
+  background-color: #142b94f1;
 
   display: grid;
   grid: 
-    repeat($n-size, 100% / $n-size)
-    / repeat($n-size, 100% / $n-size);
+    repeat($n-size, 1fr)
+    / repeat($n-size, 1fr);
+  gap: 3px;
 }
 
 .board-area {

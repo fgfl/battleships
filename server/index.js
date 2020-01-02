@@ -11,6 +11,8 @@ const methodOverride = require('method-override');
 const app = express();
 const PORT = 8080;
 
+app.set('view engine', 'ejs');
+
 app.use(express.static("public"));
 app.use(methodOverride('_method'));
 app.use(bodyParser.urlencoded({exteneded: true}));
@@ -24,6 +26,8 @@ app.use(cookieSession({
 
 const userIdCookie = 'user_id';
 const saltRounds = 10;
+const boardRows = 10;
+const boardCols = 10;
 
 // app.use((req, res, next)) => {
 //   const user = getUser(re)
@@ -36,7 +40,11 @@ const saltRounds = 10;
 // Endpoints
 //===================
 app.get('/', (req, res) => {
-  res.render('../public/index');
+  const templateVars = {
+    rows: boardRows,
+    cols: boardCols,
+  };
+  res.render('index', templateVars);
 })
 
 app.listen(PORT, () => {

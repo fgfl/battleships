@@ -1,7 +1,10 @@
 .board-area .player, .board-area .opponent {
   padding: 3%;
+  margin: 0 0;
+  background-color: #142b94f1;
   display: grid;
-  grid: repeat(10, 10%)/repeat(10, 10%);
+  grid: repeat(10, 1fr)/repeat(10, 1fr);
+  gap: 3px;
 }
 
 .board-area {
